@@ -1,8 +1,7 @@
-
 import {
   Route,
   createRoutesFromElements,
-  createBrowserRouter,
+  createHashRouter,
   RouterProvider
 } from 'react-router-dom';
 import Main from './Main';
@@ -13,9 +12,9 @@ import Services from './Routes/Services';
 import ErrorPage from './Pages/ErrorPage';
 
 function App() {
-  const router = createBrowserRouter(
+  const router = createHashRouter(
     createRoutesFromElements(
-      <Route >
+      <Route>
         <Route path='*' element={<ErrorPage/>}/>
         <Route index element={<Main />} />
         <Route path='/about' element={<About />} />
@@ -24,11 +23,9 @@ function App() {
         <Route path='/services' element={<Services />} />
       </Route>
     )
-  )
+  );
   return (
-
     <RouterProvider router={router} />
-
   );
 }
 

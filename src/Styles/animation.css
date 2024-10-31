@@ -1,0 +1,33 @@
+#SildeShowHome {
+    animation: HomeSlideShow 10s infinite alternate;
+    background: url(../Assets/Bg1.webp);
+    background-position: left;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+@keyframes HomeSlideShow {
+    33% {
+        background: url(../Assets/Bg2.webp);
+        transform: scale(1);
+        background-position: right;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    66% {
+        background: url(../Assets/Bg3.webp);
+        transform: scale(1);
+        background-position: left;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    100% {
+        background: url(../Assets/Bg1.webp);
+        transform: scale(1);
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+}
